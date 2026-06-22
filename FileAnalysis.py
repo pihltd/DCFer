@@ -17,39 +17,23 @@ unmapped_list = list(set(unmapped_list))
 mapped_count = len(mapped_df['file_id'].unique().tolist())
 unmapped_count = len(unmapped_list)
 
-#final_df = pd.DataFrame()
 
 print(f"Mapped file IDs: {mapped_count}\nUnmapped file IDs: {unmapped_count}\nTotal file IDs{unmapped_count+mapped_count}\n")
 
 #category
 cat_df = mapped_df['category'].value_counts().to_frame()
-#final_df = pd.merge(final_df, temp_df)
-#print(temp_df)
-#print(f"{mapped_df['category'].value_counts()}\n")
 
 #file_type
 file_df = mapped_df['file_type'].value_counts().to_frame()
-#final_df = pd.merge(final_df, temp_df)
-#print(temp_df)
-#print(f"{mapped_df['file_type'].value_counts()}\n")
 
 #format
 format_df = mapped_df['format'].value_counts().to_frame()
-#final_df = pd.merge(final_df, temp_df)
-#print(temp_df)
-#print(f"{mapped_df['format'].value_counts()}\n")
 
 #tumor_vs_normal
 tn_df = mapped_df['tumor_vs_normal'].value_counts().to_frame()
-##final_df = pd.merge(final_df, temp_df)
-#print(temp_df)
-#print(f"{mapped_df['tumor_vs_normal'].value_counts()}\n")
 
 #data_source
 ds_df = mapped_df['data_source'].value_counts().to_frame()
-#final_df = pd.merge(final_df, temp_df)
-#print(temp_df)
-#print(f"{mapped_df['data_source'].value_counts()}\n")
 
 final_df = pd.concat([cat_df, file_df, format_df, tn_df, ds_df])
 
