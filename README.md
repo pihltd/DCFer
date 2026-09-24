@@ -17,3 +17,7 @@ Generates a GC File load sheet for the 53 missing HTAN image files.
 Reads a directory containing submission request Excel sheets and creates a summary report.  Used primarily to document all the program and study names/abbreviations use in the KF submissions
 ## SubDataType.py
 This script generates a report of DH submissions that contains the type (Metadata only, Metadata and Files)
+## DHReleasedCaseCounter.py
+Generates a report of the number of cases in programs that have been released by DH.  Note that there are a variety of reasons why the case counts here do NOT match the case counts at the DCs.
+## DHStudyEDPtimizer.py
+Gets a list of the studies in DH for creating/maintaing the study EDP
